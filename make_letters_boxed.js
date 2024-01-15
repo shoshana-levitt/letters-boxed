@@ -54,12 +54,14 @@ function solve(sides) {
         )
     );
   }
+
   validWordsSorted.forEach((word) => {
     vsw = validSecondWords(word);
     if (vsw.length > 0 && word.localeCompare(vsw[0]) === -1) {
       solutions.push([word, vsw[0]]);
     }
   });
+
   return solutions;
 }
 
